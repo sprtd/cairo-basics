@@ -7,5 +7,6 @@ func add_one(y: felt) -> (val: felt) {
 }
 
 func add_one_U256{range_check_ptr}(y: Uint256) -> (val: Uint256) {
+
     return (y,);
 }
