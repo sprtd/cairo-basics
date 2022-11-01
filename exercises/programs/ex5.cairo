@@ -1,3 +1,6 @@
+from starkware.cairo.common.math import unsigned_div_rem
+
+
 // Implement a funcion that returns:
 // - 1 when magnitudes of inputs are equal
 // - 0 otherwise
