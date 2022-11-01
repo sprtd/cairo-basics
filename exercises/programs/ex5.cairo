@@ -5,16 +5,22 @@ from starkware.cairo.common.math import unsigned_div_rem
 // - 1 when magnitudes of inputs are equal
 // - 0 otherwise
 func abs_eq(x: felt, y: felt) -> (bit: felt) {
-    let quotient: felt = x / y;
-    // let bit: felt = 0;
+    // sum of x and y
+    let sum: felt = x + y;
 
-    %{ print(f" quotient here: {ids.quotient}")%}
+    // diff of x and y
+    let diff: felt = x - y;
 
-    // if(quotient == 1) {
-    //     bit = 1;
-    // } else {
-    //   bit = 0;
-    // }
+    // case 1
+    if(sum == 0) {
+        return(bit=1);
+    } 
 
-    return (quotient,);
+    // case 2
+    if(diff == 0) {
+        return (bit=1);
+    }
+    // if not case 1 nor case 2, bit = 0
+   return (bit = 0);
+
 }
