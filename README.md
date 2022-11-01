@@ -1,4 +1,4 @@
-# Cairo Bootcamp
+# Cairo Program Basics
 
 ## Setup:
 
