@@ -14,5 +14,15 @@ from starkware.cairo.common.math import unsigned_div_rem
 func pattern{bitwise_ptr: BitwiseBuiltin*, range_check_ptr}(
     n: felt, idx: felt, exp: felt, broken_chain: felt
 ) -> (true: felt) {
-    return (0,);
+    let (val) = bitwise_xor(n, 85);
+    let sum = n + 85;
+    let sub = n - 85;
+    if(val == sub) {
+    return (true=1);
+    } 
+    if(val == sum) {
+    return (true=1);
+
+    }
+    return (true =0);
 }

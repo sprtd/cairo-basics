@@ -20,5 +20,13 @@ func test_set_balance{syscall_ptr: felt*, pedersen_ptr: HashBuiltin*, range_chec
     let (balance) = get_balance();
     assert -8 = balance;
 
+    set_balance(10);
+    let (balance) = get_balance();
+    assert 10 = balance;
+
+    set_balance(7);
+    let (balance) = get_balance();
+    assert 7 = balance;
+
     return ();
 }

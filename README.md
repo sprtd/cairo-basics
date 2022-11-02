@@ -1,4 +1,4 @@
-# Cairo Program Basics
+# Cairo Basics
 
 ## Setup:
 

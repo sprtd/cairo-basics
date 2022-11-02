@@ -13,6 +13,8 @@ func sum_even{bitwise_ptr: BitwiseBuiltin*, range_check_ptr}(arr_len: felt, arr:
     let (next) = sum_even(arr_len, arr, run, idx + 1);
     let (unsigned_quotient, remainder) = unsigned_div_rem(current, 2);
     if(remainder == 0) {
+        // let (checks) = ;
+        %{ print("f: {ids.next + current} ") %}
         return (sum = next + current);
     }
 
